@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FitLife helps you build healthy habits with simple workouts, expert guidance, and a supportive fitness community.">
+
+```
+<title>FitLife | Your Fitness Journey Starts Here</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+    
+    :root {
+        --primary: #176b52;
+        --primary-dark: #10523e;
+        --secondary: #e6f3ec;
+        --accent: #f5b942;
+        --background: #f8faf8;
+        --white: #ffffff;
+        --text: #19352b;
+        --text-light: #64766d;
+        --border: #e2ebe5;
+
+        --shadow: 0 10px 30px rgba(25, 53, 43, 0.08);
+        --radius: 16px;
+        --container-width: 1100px;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 90px;
+    }
+
+    body {
+        font-family: "DM Sans", Arial, sans-serif;
+        background-color: var(--background);
+        color: var(--text);
+        line-height: 1.7;
+        overflow-wrap: break-word;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: "Manrope", Arial, sans-serif;
+        line-height: 1.2;
+    }
+
+    h1 {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 800;
+        letter-spacing: -2px;
+    }
+
+    h2 {
+        font-size: clamp(1.9rem, 3.5vw, 2.7rem);
+        font-weight: 800;
+        letter-spacing: -1px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    p {
+        color: var(--text-light);
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+
+    .container {
+        width: min(100% - 40px, var(--container-width));
+        margin-inline: auto;
+    }
+
+    .section {
+        padding: 90px 0;
+    }
+
+    .section-heading {
+        max-width: 650px;
+        margin: 0 auto 45px;
+        text-align: center;
+    }
+
+    .section-heading p {
+        margin-top: 16px;
+    }
+
+    .eyebrow {
+        display: inline-block;
+        margin-bottom: 16px;
+        color: var(--primary);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    
+
+    .btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        padding: 13px 24px;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        background-color: var(--primary);
+        color: var(--white);
+        font-family: inherit;
+        font-size: 0.95rem;
+        font-weight: 700;
+        text-align: center;
+        cursor: pointer;
+        transition:
+            background-color 0.25s ease,
+            transform 0.25s ease,
+            box-shadow 0.25s ease;
+    }
+
+    .btn:hover {
+        background-color: var(--primary-dark);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 18px rgba(23, 107, 82, 0.2);
+    }
+
+    .btn:focus-visible,
+    a:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 4px;
+    }
+
+    .btn-light {
+        background-color: var(--white);
+        color: var(--primary-dark);
+    }
+
+    .btn-light:hover {
+        background-color: var(--secondary);
+    }
+
+    
+
+    .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background-color: rgba(248, 250, 248, 0.96);
+        border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        min-height: 76px;
+        padding-block: 12px;
+    }
+
+    .logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+        color: var(--primary);
+        font-family: "Manrope", Arial, sans-serif;
+        font-size: 1.5rem;
+        font-weight: 800;
+    }
+
+    .logo-icon {
+        display: grid;
+        width: 38px;
+        height: 38px;
+        place-items: center;
+        border-radius: 12px;
+        background-color: var(--primary);
+        color: var(--white);
+        font-size: 1.25rem;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 26px;
+        list-style: none;
+    }
+
+    .nav-links a {
+        color: var(--text-light);
+        font-size: 0.9rem;
+        font-weight: 600;
+        transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+        color: var(--primary);
+    }
+
+    .nav-links .nav-cta {
+        padding: 10px 18px;
+        border-radius: 8px;
+        background-color: var(--primary);
+        color: var(--white);
+    }
+
+    .nav-links .nav-cta:hover {
+        background-color: var(--primary-dark);
+    }
+
+    
+
+    .hero {
+        padding: 75px 0 90px;
+    }
+
+    .hero-grid {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .hero-content h1 span {
+        color: var(--primary);
+    }
+
+    .hero-description {
+        max-width: 500px;
+        margin: 24px 0 30px;
+        font-size: 1.05rem;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .hero-note {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 28px;
+        font-size: 0.88rem;
+    }
+
+    .hero-note strong {
+        color: var(--text);
+    }
+
+    .hero-visual {
+        position: relative;
+        min-width: 0;
+        padding: 18px;
+        border-radius: 28px;
+        background-color: var(--secondary);
+    }
+
+    .hero-image {
+        width: 100%;
+        aspect-ratio: 4 / 4.3;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    .floating-card {
+        position: absolute;
+        right: -20px;
+        bottom: 35px;
+        max-width: calc(100% - 10px);
+        padding: 16px 20px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background-color: var(--white);
+        box-shadow: var(--shadow);
+    }
+
+    .floating-card strong {
+        display: block;
+        color: var(--primary);
+        font-family: "Manrope", Arial, sans-serif;
+        font-size: 1.3rem;
+    }
+
+    .floating-card span {
+        color: var(--text-light);
+        font-size: 0.8rem;
+    }
+
+    
+
+    .features {
+        background-color: var(--white);
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .feature-card {
+        padding: 30px 26px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background-color: var(--white);
+        transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease,
+            border-color 0.25s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-6px);
+        border-color: #b9d9c8;
+        box-shadow: var(--shadow);
+    }
+
+    .feature-icon {
+        display: grid;
+        width: 56px;
+        height: 56px;
+        margin-bottom: 22px;
+        place-items: center;
+        border-radius: 15px;
+        background-color: var(--secondary);
+        font-size: 1.7rem;
+    }
+
+    .feature-card h3 {
+        margin-bottom: 12px;
+    }
+
+    .feature-card p {
+        font-size: 0.94rem;
+    }
+
+    
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 65px;
+    }
+
+    .about-visual {
+        min-width: 0;
+        padding: 24px;
+        border-radius: 24px;
+        background-color: #d9eee2;
+    }
+
+    .about-image {
+        width: 100%;
+        aspect-ratio: 5 / 4;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+
+    .about-content h2 {
+        margin-bottom: 20px;
+    }
+
+    .about-content > p {
+        margin-bottom: 22px;
+    }
+
+    .about-list {
+        display: grid;
+        gap: 14px;
+        margin: 26px 0 30px;
+        list-style: none;
+    }
+
+    .about-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        font-weight: 600;
+    }
+
+    .check-icon {
+        display: grid;
+        width: 26px;
+        height: 26px;
+        flex-shrink: 0;
+        place-items: center;
+        border-radius: 50%;
+        background-color: var(--secondary);
+        color: var(--primary);
+        font-size: 0.85rem;
+    }
+
+
+    .cta-section {
+        padding: 20px 0 90px;
+    }
+
+    .cta-banner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 48px;
+        border-radius: 24px;
+        background-color: var(--primary);
+        color: var(--white);
+    }
+
+    .cta-content {
+        max-width: 600px;
+    }
+
+    .cta-content h2 {
+        margin-bottom: 14px;
+        color: var(--white);
+    }
+
+    .cta-content p {
+        color: #e0eee6;
+    }
+
+    
+
+    .site-footer {
+        padding: 65px 0 24px;
+        background-color: #142f26;
+        color: var(--white);
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 40px;
+        padding-bottom: 45px;
+    }
+
+    .footer-brand .logo {
+        margin-bottom: 18px;
+        color: var(--white);
+    }
+
+    .footer-brand p {
+        max-width: 280px;
+        color: #c1d2c9;
+        font-size: 0.9rem;
+    }
+
+    .footer-column h3 {
+        margin-bottom: 20px;
+        font-size: 1rem;
+    }
+
+    .footer-column ul {
+        display: grid;
+        gap: 12px;
+        list-style: none;
+    }
+
+    .footer-column a,
+    .footer-column li {
+        color: #c1d2c9;
+        font-size: 0.9rem;
+        overflow-wrap: anywhere;
+    }
+
+    .footer-column a:hover {
+        color: var(--white);
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding-top: 24px;
+        border-top: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .footer-bottom p {
+        color: #c1d2c9;
+        font-size: 0.85rem;
+    }
+
+    
+    @media (max-width: 900px) {
+        .section {
+            padding: 70px 0;
+        }
+
+        .hero {
+            padding: 60px 0 70px;
+        }
+
+        .hero-grid {
+            grid-template-columns: 1fr 0.85fr;
+            gap: 30px;
+        }
+
+        .floating-card {
+            right: 5px;
+        }
+
+        .features-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .about-grid {
+            gap: 35px;
+        }
+
+        .cta-banner {
+            padding: 36px;
+        }
+
+        .footer-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 35px;
+        }
+    }
+
+    
+
+    @media (max-width: 600px) {
+        .container {
+            width: min(100% - 32px, var(--container-width));
+        }
+
+        .navbar {
+            flex-direction: column;
+            justify-content: center;
+            gap: 12px;
+            padding-block: 16px;
+        }
+
+        .nav-links {
+            justify-content: center;
+            gap: 10px 18px;
+        }
+
+        .nav-links a {
+            font-size: 0.85rem;
+        }
+
+        .nav-links .nav-cta {
+            padding: 7px 12px;
+        }
+
+        .section {
+            padding: 55px 0;
+        }
+
+        .section-heading {
+            margin-bottom: 30px;
+        }
+
+        .hero {
+            padding: 45px 0 60px;
+        }
+
+        .hero-grid {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        h1 {
+            font-size: clamp(2.35rem, 10vw, 3.3rem);
+            letter-spacing: -1.5px;
+        }
+
+        .hero-description {
+            font-size: 1rem;
+        }
+
+        .hero-actions {
+            align-items: stretch;
+        }
+
+        .hero-actions .btn {
+            width: 100%;
+        }
+
+        .hero-visual {
+            width: 100%;
+            max-width: 440px;
+            margin-inline: auto;
+            padding: 12px;
+        }
+
+        .hero-image {
+            aspect-ratio: 4 / 3.8;
+        }
+
+        .floating-card {
+            right: 8px;
+            bottom: 24px;
+            padding: 12px 16px;
+        }
+
+        .features-grid {
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .feature-card {
+            padding: 25px;
+        }
+
+        .about-grid {
+            grid-template-columns: 1fr;
+            gap: 35px;
+        }
+
+        .about-visual {
+            padding: 14px;
+        }
+
+        .cta-section {
+            padding: 10px 0 60px;
+        }
+
+        .cta-banner {
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 30px 24px;
+        }
+
+        .cta-banner .btn {
+            width: 100%;
+        }
+
+        .footer-grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .footer-bottom {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+            transition-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+
+
+<header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+
+        <a href="#home" class="logo" aria-label="FitLife home">
+            <span class="logo-icon" aria-hidden="true">✦</span>
+            FitLife
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#get-started" class="nav-cta">Get Started ↗</a></li>
+        </ul>
+
+    </nav>
+</header>
+
+
+
+<main>
+
+    
+
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+
+            <div class="hero-content">
+
+                <span class="eyebrow">Your journey, your pace</span>
+
+                <h1>
+                    Build a healthier
+                    <span>you.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Fitness doesn't have to be complicated.
+                    Discover simple workouts, build healthy habits,
+                    and become the strongest version of yourself
+                    with FitLife.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#get-started" class="btn">
+                        Start Your Journey →
+                    </a>
+
+                    <a href="#features" class="btn btn-light">
+                        Explore Features
+                    </a>
+                </div>
+
+                <div class="hero-note">
+                    <span aria-hidden="true">🌱</span>
+                    <span>
+                        <strong>Small steps.</strong>
+                        Lasting habits.
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="hero-visual">
+
+                <img
+                    class="hero-image"
+                    src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=85"
+                    alt="Modern fitness gym with workout equipment"
+                    fetchpriority="high"
+                >
+
+                <div class="floating-card">
+                    <strong>Move better.</strong>
+                    <span>Feel stronger every day.</span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    
+
+    <section class="section features" id="features">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="eyebrow">Why FitLife?</span>
+
+                <h2>Everything you need to feel your best</h2>
+
+                <p>
+                    Create a fitness routine that fits your life,
+                    supports your goals, and keeps you moving forward.
+                </p>
+            </div>
+
+            <div class="features-grid">
+
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🏋️</div>
+
+                    <h3>Simple Workouts</h3>
+
+                    <p>
+                        Follow beginner-friendly workout ideas that
+                        help you build strength at your own pace.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🥗</div>
+
+                    <h3>Healthy Habits</h3>
+
+                    <p>
+                        Make everyday wellness easier with balanced
+                        routines, mindful choices, and better habits.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">📈</div>
+
+                    <h3>Track Your Progress</h3>
+
+                    <p>
+                        Celebrate your consistency and recognize
+                        the small milestones along your journey.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+      <section class="section" id="about">
+        <div class="container about-grid">
+
+            <div class="about-visual">
+
+                <img
+                    class="about-image"
+                    src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=85"
+                    alt="Person practicing a fitness and stretching routine"
+                    loading="lazy"
+                >
+
+            </div>
+
+            <div class="about-content">
+
+                <span class="eyebrow">A better way to begin</span>
+
+                <h2>Fitness that fits your everyday life</h2>
+
+                <p>
+                    We believe feeling healthier starts with small,
+                    realistic changes. You don't need a perfect
+                    routine or an expensive gym membership to begin.
+                </p>
+
+                <p>
+                    FitLife is designed to help you make movement,
+                    consistency, and self-care a natural part of
+                    your everyday routine.
+                </p>
+
+                <ul class="about-list">
+
+                    <li>
+                        <span class="check-icon" aria-hidden="true">✓</span>
+                        Workouts for different experience levels
+                    </li>
+
+                    <li>
+                        <span class="check-icon" aria-hidden="true">✓</span>
+                        Flexible routines for busy schedules
+                    </li>
+
+                    <li>
+                        <span class="check-icon" aria-hidden="true">✓</span>
+                        A focus on progress, not perfection
+                    </li>
+
+                </ul>
+
+                <a href="#get-started" class="btn">
+                    Discover FitLife →
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL-TO-ACTION SECTION -->
+
+    <section class="cta-section" id="get-started">
+        <div class="container">
+
+            <div class="cta-banner">
+
+                <div class="cta-content">
+
+                    <h2>Ready to make a fresh start?</h2>
+
+                    <p>
+                        Take the first step toward healthier habits.
+                        Your journey can begin today, one small step
+                        at a time.
+                    </p>
+
+                </div>
+
+                <a href="#contact" class="btn btn-light">
+                    Let's Get Started →
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+
+
+<footer class="site-footer" id="contact">
+    <div class="container">
+
+        <div class="footer-grid">
+
+            
+
+            <div class="footer-brand">
+
+                <a href="#home" class="logo">
+                    <span class="logo-icon" aria-hidden="true">✦</span>
+                    FitLife
+                </a>
+
+                <p>
+                    Helping you build healthier habits and make
+                    fitness a positive part of everyday life.
+                </p>
+
+            </div>
+
+            
+
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#get-started">Get Started</a></li>
+                </ul>
+
+            </div>
+
+          
+
+            <div class="footer-column">
+
+                <h3>Contact</h3>
+
+                <ul>
+                    <li>
+                        <a href="mailto:hello@example.com">
+                            hello@example.com
+                        </a>
+                    </li>
+
+                    <li>Monday – Friday</li>
+                    <li>9:00 AM – 5:00 PM</li>
+                </ul>
+
+            </div>
+
+            
+
+            <div class="footer-column">
+
+                <h3>Follow Us</h3>
+
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/">
+                            Instagram
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.linkedin.com/">
+                            LinkedIn
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.youtube.com/">
+                            YouTube
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 FitLife. All rights reserved.
+            </p>
+
+            <p>
+                Made with care for a healthier everyday.
+            </p>
+
+        </div>
+
+    </div>
+</footer>
+```
+
+</body>
+</html>
