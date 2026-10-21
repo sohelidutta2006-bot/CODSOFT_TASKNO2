@@ -4,7 +4,7 @@ A modern, clean, and responsive fitness landing page built using **HTML5 and CSS
 
 ## 🔗 Live Demo
 
-**Demo Link:**
+Demo Link:https://fitlifelandingpagecodesoftproject.vercel.app/
 
 <!-- Add your deployed website URL above -->
 
